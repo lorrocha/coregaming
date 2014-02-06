@@ -5,7 +5,7 @@
 
 <p>Store Hours:</p>
 <ul>
-  <% @hours.each do |hour| %>
-  <li><%= hour %></li>
+  <% @hours.each do |day| %>
+  <li><%= day[0] %>: <%= day[1] %></li>
   <% end %>
 </ul>
