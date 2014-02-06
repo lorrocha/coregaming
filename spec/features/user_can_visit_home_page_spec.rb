@@ -11,7 +11,6 @@ feature 'A viewer can find info on homepage', %{
   end
 
   scenario 'a visitor can see the home page' do
-    save_and_open_page
     expect(page).to have_content('CORE Gaming')
   end
 
