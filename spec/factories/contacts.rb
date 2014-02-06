@@ -2,5 +2,10 @@
 
 FactoryGirl.define do
   factory :contact do
+    sequence(:first_name) {|n|"Poop#{n}"}
+    last_name "Dingkle"
+    sequence(:email) {|n| "sexycougar#{n}@cougar.co"}
+    subject "Rabble Rabble!"
+    description "HEWY YOU SUCK!"
   end
 end

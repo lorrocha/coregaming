@@ -3,7 +3,7 @@ require 'spec_helper'
 feature 'A user can submit a contact us feedback form' do
 
   scenario 'A user can submit a form with info' do
-    # ActionMailer::Base.deliveries = []
+    ActionMailer::Base.deliveries = []
 
     visit new_contact_path
 
@@ -17,8 +17,8 @@ feature 'A user can submit a contact us feedback form' do
     expect(Contact.all.count).to eql(1)
     expect(page).to have_content('Your contact has been submitted! You should hear back shortly.')
 
-    # expect(ActionMailer::Base.deliveries.size).to eql(1)
-    # last_email = ActionMailer::Base.deliveries.last
+    expect(ActionMailer::Base.deliveries.size).to eql(1)
+    last_email = ActionMailer::Base.deliveries.last
   end
 
   scenario 'A user cannot submit a contact inquiry if they dont fill in values' do
