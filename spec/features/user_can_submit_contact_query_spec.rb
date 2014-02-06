@@ -19,6 +19,7 @@ feature 'A user can submit a contact us feedback form' do
 
     expect(ActionMailer::Base.deliveries.size).to eql(1)
     last_email = ActionMailer::Base.deliveries.last
+    expect(last_email).to have_content('Someone wants to talk to ya!')
   end
 
   scenario 'A user cannot submit a contact inquiry if they dont fill in values' do

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hey, Matt! <%= "#{@contact.first_name} #{@contact.last_name}"%> wants to talk to you!</h1>
+    <p>
+      Subject: <%= @contact.subject %>
+    </p>
+    <p>
+      Text: <%= @contact.description %>
+    </p>
+  </body>
+</html>
