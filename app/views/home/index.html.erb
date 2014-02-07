@@ -1,11 +1,18 @@
-<h1>CORE Gaming</h1>
+<div class="row">
+  <div class="small-12 columns">
+  <div id="main-title">
+    <p>CORE Gaming</p>
+  </div>
 
-<h3>19 N Broadway, Salem, NH 03079</h3>
-<h3>(603) 458-5791</h3>
 
-<p>Store Hours:</p>
-<ul>
-  <% @hours.each do |day| %>
-  <li><%= day[0] %>: <%= day[1] %></li>
-  <% end %>
-</ul>
+  <h4>19 N Broadway, Salem, NH 03079</h4>
+  <h4>(603) 458-5791</h4>
+
+  <p>Store Hours:</p>
+  <ul>
+    <% @hours.each do |day| %>
+    <li><%= day[0] %>: <%= day[1] %></li>
+    <% end %>
+  </ul>
+  </div>
+</div>

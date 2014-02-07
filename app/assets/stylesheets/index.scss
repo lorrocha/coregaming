@@ -1,0 +1,16 @@
+body {
+  background-image: url('mario_wallpaper.jpg');
+  background-size: 80%;
+}
+
+#main-title {
+  width:13em;
+  height: 6em;
+  background:white;
+  text-align:center;
+  -webkit-border-radius: 180px;
+  -moz-border-radius: 180px;
+  border-radius: 180px;
+
+  border:red 8px solid;
+}
