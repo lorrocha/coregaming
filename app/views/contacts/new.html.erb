@@ -1,10 +1,16 @@
-<%= simple_form_for(@contact) do |f| %>
+<div class="row">
+  <div class="small-6 small-centered columns">
+    <p> Let us know what you think!</p>
 
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :email %>
-  <%= f.input :subject %>
-  <%= f.input :description %>
-  <%= f.button :submit, 'Submit Contact' %>
+    <%= simple_form_for(@contact) do |f| %>
 
-<% end %>
+      <%= f.input :first_name %>
+      <%= f.input :last_name %>
+      <%= f.input :email %>
+      <%= f.input :subject %>
+      <%= f.input :description %>
+      <%= f.button :submit, 'Submit Contact' %>
+
+    <% end %>
+  </div>
+</div>
