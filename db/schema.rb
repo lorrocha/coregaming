@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140206211816) do
+ActiveRecord::Schema.define(version: 20140222183559) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 20140206211816) do
     t.string   "email",       null: false
     t.string   "subject",     null: false
     t.text     "description", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "events", force: true do |t|
+    t.string   "name",                                null: false
+    t.string   "description",                         null: false
+    t.string   "date",                                null: false
+    t.string   "location",    default: "Core Gaming"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
